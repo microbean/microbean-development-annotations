@@ -23,10 +23,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Indicates that the annotated element is <em>experimental</em> in
- * some way.
+ * Describes an <em>issue</em> that is related to the annotated
+ * element.
  *
- * @author <a href="https://about.me/lairdnelson"
+ * @author <a href="https://about.me/lairdnelson/"
  * target="_parent">Laird Nelson</a>
  */
 @Documented
@@ -43,6 +43,57 @@ import java.lang.annotation.Target;
   ElementType.TYPE_PARAMETER,
   ElementType.TYPE_USE
 })
-public @interface Experimental {
+public @interface Issue {
 
+  /**
+   * Describes when the issue itself was created.
+   */
+  String createdOn() default "";
+
+  /**
+   * A description of the issue.
+   */
+  String description() default "";
+
+  /**
+   * A description of the effect the issue has on the annotated
+   * element.
+   */
+  String effect() default "";
+
+  /**
+   * Identifying information about the issue.
+   */
+  String id() default "";
+
+  /**
+   * The kind of issue this is.
+   */
+  String type() default "";
+
+  /**
+   * How the issue was resolved.
+   */
+  String resolution() default "";
+
+  /**
+   * When the issue was resolved.
+   */
+  String resolvedOn() default "";
+
+  /**
+   * A description of the current status of the issue.
+   */
+  String status() default "";
+
+  /**
+   * The severity of the issue.
+   */
+  String severity() default "";
+
+  /**
+   * Where more information about the issue may be found.
+   */
+  String uri() default "";
+  
 }

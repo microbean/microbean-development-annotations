@@ -23,8 +23,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Indicates that the annotated element is <em>experimental</em> in
- * some way.
+ * Indicates that the annotated element has some work associated with
+ * it.
  *
  * @author <a href="https://about.me/lairdnelson"
  * target="_parent">Laird Nelson</a>
@@ -43,6 +43,16 @@ import java.lang.annotation.Target;
   ElementType.TYPE_PARAMETER,
   ElementType.TYPE_USE
 })
-public @interface Experimental {
+public @interface Todo {
 
+  /**
+   * A description of the work.
+   */
+  String value() default "";
+
+  /**
+   * Where more information about the work may be found.q
+   */
+  String uri() default "";
+  
 }

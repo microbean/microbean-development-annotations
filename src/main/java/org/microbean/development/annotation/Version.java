@@ -18,18 +18,20 @@ package org.microbean.development.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Indicates that the annotated element is <em>experimental</em> in
- * some way.
+ * Indicates that the annotated element is associated with some kind
+ * of version.
  *
  * @author <a href="https://about.me/lairdnelson"
  * target="_parent">Laird Nelson</a>
  */
 @Documented
+@Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({
   ElementType.ANNOTATION_TYPE,
@@ -43,6 +45,11 @@ import java.lang.annotation.Target;
   ElementType.TYPE_PARAMETER,
   ElementType.TYPE_USE
 })
-public @interface Experimental {
+public @interface Version {
 
+  /**
+   * The value of the version.
+   */
+  String value() default "";
+  
 }
