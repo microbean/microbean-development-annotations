@@ -1,6 +1,6 @@
 /* -*- mode: Java; c-basic-offset: 2; indent-tabs-mode: nil; coding: utf-8-unix -*-
  *
- * Copyright © 2017 MicroBean.
+ * Copyright © 2018 microBean.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Indicates that the annotated element has some work associated with
- * it.
+ * Indicates that the annotated element is a hack or relates to a hack
+ * of some kind.
  *
  * @author <a href="https://about.me/lairdnelson"
  * target="_parent">Laird Nelson</a>
@@ -33,26 +33,18 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({
   ElementType.ANNOTATION_TYPE,
-  ElementType.CONSTRUCTOR,
   ElementType.FIELD,
   ElementType.LOCAL_VARIABLE,
   ElementType.METHOD,
-  ElementType.PACKAGE,
-  ElementType.PARAMETER,
   ElementType.TYPE,
   ElementType.TYPE_PARAMETER,
   ElementType.TYPE_USE
 })
-public @interface Todo {
+public @interface Hack {
 
   /**
-   * A description of the work.
+   * A description of the hack.
    */
   String value() default "";
-
-  /**
-   * Where more information about the work may be found.
-   */
-  String uri() default "";
   
 }
