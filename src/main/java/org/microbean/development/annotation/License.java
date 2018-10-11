@@ -18,6 +18,7 @@ package org.microbean.development.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -30,12 +31,20 @@ import java.lang.annotation.Target;
  * target="_parent">Laird Nelson</a>
  */
 @Documented
+@Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({
+  ElementType.ANNOTATION_TYPE,
+  ElementType.PACKAGE,
   ElementType.TYPE
 })
 public @interface License {
 
+  /**
+   * The name of the license in question.
+   */
+  String name() default "";
+  
   /**
    * An absolute URI identifying the license in question.
    */
