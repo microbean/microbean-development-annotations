@@ -76,6 +76,17 @@
         <artifactId>site-maven-plugin</artifactId>
       </plugin>
 
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Automatic-Module-Name>org.microbean.development.annotation</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      
     </plugins>
   </build>
 
