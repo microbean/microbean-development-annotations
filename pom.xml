@@ -9,14 +9,19 @@
   <parent>
     <groupId>org.microbean</groupId>
     <artifactId>microbean-pluginmanagement-pom</artifactId>
-    <version>9</version>
+    <version>11</version>
     <relativePath />
   </parent>
 
   <name>microBean Development Annotations</name>
   <description>Annotations useful for development</description>
-  <inceptionYear>2017</inceptionYear>
   <url>https://microbean.github.io/${project.artifactId}</url>
+  <inceptionYear>2017</inceptionYear>
+
+  <organization>
+    <name>microBean™</name>
+    <url>http://microbean.systems/</url>
+  </organization>
 
   <scm>
     <connection>scm:git:git@github.com:microbean/${project.artifactId}.git</connection>
@@ -40,18 +45,6 @@
   
   <build>
 
-    <pluginManagement>
-      <plugins>
-
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.1</version>
-        </plugin>
-        
-      </plugins>
-    </pluginManagement>
-
-    
     <plugins>
 
       <plugin>
@@ -79,20 +72,10 @@
     
   </build>
 
-  <properties>
-
-    <!-- maven-javadoc-plugin properties; see https://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html -->
-    <links>http://www.grpc.io/grpc-java/javadoc/,https://developers.google.com/protocol-buffers/docs/reference/java/,https://google.github.io/guava/releases/19.0/api/docs/,https://microbean.github.io/microbean-kubernetes/apidocs/</links>
-    
-  </properties>
-
   <reporting>
     <plugins>
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <configuration>
-          <doclint>-missing</doclint>
-        </configuration>
         <reportSets>
           <reportSet>
             <reports>

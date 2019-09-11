@@ -1,6 +1,6 @@
 /* -*- mode: Java; c-basic-offset: 2; indent-tabs-mode: nil; coding: utf-8-unix -*-
  *
- * Copyright © 2017 MicroBean.
+ * Copyright © 2017–2019 microBean™.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,52 +47,74 @@ public @interface Issue {
 
   /**
    * Describes when the issue itself was created.
+   *
+   * @return a description of when the issue itself was created
    */
   String createdOn() default "";
 
   /**
    * A description of the issue.
+   *
+   * @return a description of the issue
    */
   String description() default "";
 
   /**
    * A description of the effect the issue has on the annotated
    * element.
+   *
+   * @return a description of the effect the issue has on the
+   * annotated element
    */
   String effect() default "";
 
   /**
    * Identifying information about the issue.
+   *
+   * @return identifying information about the issue
    */
   String id() default "";
 
   /**
    * The kind of issue this is.
+   *
+   * @return the kind of issue this is
    */
   String type() default "";
 
   /**
    * How the issue was resolved.
+   *
+   * @return how the issue was resolved
    */
   String resolution() default "";
 
   /**
    * When the issue was resolved.
+   *
+   * @return a {@link String} describing when the issue was resolved
    */
   String resolvedOn() default "";
 
   /**
    * A description of the current status of the issue.
+   *
+   * @return a description of the current status of the issue
    */
   String status() default "";
 
   /**
    * The severity of the issue.
+   *
+   * @return the severity of the issue
    */
   String severity() default "";
 
   /**
    * Where more information about the issue may be found.
+   *
+   * @return where more information about the issue may be found in
+   * URI form
    */
   String uri() default "";
   

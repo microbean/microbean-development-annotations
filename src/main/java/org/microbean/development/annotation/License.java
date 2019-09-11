@@ -1,6 +1,6 @@
 /* -*- mode: Java; c-basic-offset: 2; indent-tabs-mode: nil; coding: utf-8-unix -*-
  *
- * Copyright © 2018 microBean.
+ * Copyright © 2018–2019 microBean™.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,11 +42,16 @@ public @interface License {
 
   /**
    * The name of the license in question.
+   *
+   * @return the name of the license in question
    */
   String name() default "";
   
   /**
    * An absolute URI identifying the license in question.
+   *
+   * @return a {@link String} representation of an absolute URI
+   * identifying the license in question
    */
   String uri();
   
