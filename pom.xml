@@ -9,7 +9,7 @@
   <parent>
     <groupId>org.microbean</groupId>
     <artifactId>microbean-pluginmanagement-pom</artifactId>
-    <version>11</version>
+    <version>17</version>
     <relativePath />
   </parent>
 
@@ -29,19 +29,6 @@
     <url>https://github.com/microbean/${project.artifactId}/</url>
     <tag>HEAD</tag>
   </scm>
-  
-  <dependencies>
-
-    <!-- Test-scoped dependencies. -->
-    
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <type>jar</type>
-      <scope>test</scope>
-    </dependency>
-    
-  </dependencies>
   
   <build>
 
