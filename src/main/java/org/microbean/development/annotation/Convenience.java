@@ -23,7 +23,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Indicates that the annotated method is a convenience method.
+ * Indicates that the annotated method is a convenience method or
+ * constructor.
  *
  * @author <a href="https://about.me/lairdnelson"
  * target="_parent">Laird Nelson</a>
@@ -31,6 +32,7 @@ import java.lang.annotation.Target;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({
+  ElementType.CONSTRUCTOR,
   ElementType.METHOD
 })
 public @interface Convenience {
