@@ -4,7 +4,7 @@
 
   <groupId>org.microbean</groupId>
   <artifactId>microbean-development-annotations</artifactId>
-  <version>0.2.7-SNAPSHOT</version>
+  <version>0.2.8-SNAPSHOT</version>
 
   <parent>
     <groupId>org.microbean</groupId>
