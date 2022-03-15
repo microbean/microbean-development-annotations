@@ -4,7 +4,7 @@
 
   <groupId>org.microbean</groupId>
   <artifactId>microbean-development-annotations</artifactId>
-  <version>0.2.12-SNAPSHOT</version>
+  <version>0.2.12</version>
 
   <parent>
     <groupId>org.microbean</groupId>
@@ -27,7 +27,7 @@
     <connection>scm:git:git@github.com:microbean/microbean-development-annotations.git</connection>
     <developerConnection>scm:git:git@github.com:microbean/microbean-development-annotations.git</developerConnection>
     <url>https://github.com/microbean/microbean-development-annotations/</url>
-    <tag>HEAD</tag>
+    <tag>v0.2.12</tag>
   </scm>
   
   <build>
